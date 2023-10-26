@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+const App = () => {
+    return (
+        <div className="app">
+            <Header />
+            <Navigation />
+            <ProductGrid />
+            <Footer />
+        </div>
+    );
 }
 
-export default App
+const Header = () => (
+    <header>
+        Voltz
+    </header>
+);
+
+const Navigation = () => (
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Cart</a>
+    </nav>
+);
+
+const ProductGrid = () => (
+    <section className="product-grid">
+        <ProductItem title="Product 1" price="$100" />
+        <ProductItem title="Product 2" price="$120" />
+        <ProductItem title="Product 3" price="$90" />
+        {/* Add more <ProductItem /> as needed */}
+    </section>
+);
+
+const ProductItem = ({ title, price }) => (
+    <div className="product-item">
+        <img src="" alt={title} />
+        <h1>{title}</h1>
+        <p>{price}</p>
+        <button>Add to Cart</button>
+    </div>
+);
+
+const Footer = () => (
+    <footer>
+        Copyright © 2023 Voltz
+    </footer>
+);
+
+export default App;
