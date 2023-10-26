@@ -33,7 +33,7 @@ const ProductGrid = () => (
         <ProductItem title="Product 1" price="$100" />
         <ProductItem title="Product 2" price="$120" />
         <ProductItem title="Product 3" price="$90" />
-        {/* Add more <ProductItem /> as needed */}
+        {/* Add more <Product /> as needed */}
     </section>
 );
 
