@@ -1,4 +1,11 @@
 
+body, h1, p, button, select, img {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
 header, nav, section, footer {
   padding: 20px;
   margin: 10px 0;
@@ -8,6 +15,19 @@ header, nav, section, footer {
 header {
   background-color: #333;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sign-in-btn {
+  margin-right: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
 }
 
 nav {
