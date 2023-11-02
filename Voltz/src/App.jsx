@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Authenticate from "./components/Authenticate";
+import SignUpForm from "./components/SignUpForm";
 
 const App = () => {
     return (
@@ -52,4 +54,7 @@ const Footer = () => (
     </footer>
 );
 
+
+
 export default App;
+
