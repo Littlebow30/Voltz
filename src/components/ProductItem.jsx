@@ -6,3 +6,4 @@ const ProductItem = ({ title, price }) => (
         <button>Add to Cart</button>
     </div>
 );
+export default ProductItem;

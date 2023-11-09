@@ -4,6 +4,13 @@ import './App.css';
 import Authenticate from "./components/Authenticate";
 import SignUpForm from "./components/SignUpForm";
 import Header from "./components/header";
+import AboutPage from './components/AboutPage';
+import CartPage from './components/CartPage';
+import ContactPage from './components/ContactPage'
+import Footer from "./components/Footer";
+import Home from "./components/HomePage"; 
+import Navigation from "./components/Navigation"
+import Product from "./components/ProductPage";
 
 const App = () => {
     return (
@@ -13,7 +20,7 @@ const App = () => {
                 <Navigation />
                 <Routes>
                     <Route path="/" exact element={<Home />} />
-                    <Route path="/products" element={<ProductsPage/>} />
+                    <Route path="/products" element={<Product/>} />
                     <Route path="/about" element={<AboutPage />}/>
                     <Route path="/contact" element={<ContactPage/>} />
                     <Route path="/cart" element={<CartPage/>} />

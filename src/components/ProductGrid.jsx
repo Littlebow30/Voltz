@@ -1,3 +1,4 @@
+import ProductItem from "./ProductItem"
 export default function ProductGrid() {
     return  <section className="product-grid">
             <ProductItem title="Product 1" price="$100" />

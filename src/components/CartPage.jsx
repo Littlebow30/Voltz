@@ -4,4 +4,4 @@ const CartPage = () => (
        <h1>Items In Your Cart</h1>
     </div>
 
-);
+);export default CartPage
