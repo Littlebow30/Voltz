@@ -24,6 +24,7 @@ const App = () => {
                     <Route path="/about" element={<AboutPage />}/>
                     <Route path="/contact" element={<ContactPage/>} />
                     <Route path="/cart" element={<CartPage/>} />
+                    <Route path="/SignUpForm" element={<SignUpForm/>} />
                 </Routes>
                 <Footer />
             </div>
@@ -32,4 +33,3 @@ const App = () => {
 }
 
 export default App;
-

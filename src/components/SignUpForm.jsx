@@ -1,5 +1,13 @@
-export default function SignUpForm() {
-    return <h2>Sign Up!</h2>;
-  }
+import React from "react";
 
-  
+export default function SignUpForm() {
+    return  <form>
+              <label>
+              Username: <input />
+              </label>
+              <label><br/>
+              Password: <input />
+              </label><br/>
+              <button>Submit</button>
+            </form>;
+};
