@@ -11,9 +11,14 @@ import Footer from "./components/Footer";
 import Home from "./components/HomePage"; 
 import Navigation from "./components/Navigation"
 import Product from "./components/ProductPage";
+import { CartProvider } from "./components/cart-context"; 
+import ProductDetail from './components/PruductDetail';
+import { ProductProvider } from './components/product-context';
 
 const App = () => {
     return (
+        <ProductProvider>
+        <CartProvider>
         <Router>
             <div className="app">
                 <Header />
@@ -25,10 +30,13 @@ const App = () => {
                     <Route path="/contact" element={<ContactPage/>} />
                     <Route path="/cart" element={<CartPage/>} />
                     <Route path="/SignUpForm" element={<SignUpForm/>} />
+                     <Route path="/products/:productId" element={<ProductDetail />} />   
                 </Routes>
                 <Footer />
             </div>
          </Router>
+         </CartProvider>
+         </ProductProvider>
     );
 }
 
