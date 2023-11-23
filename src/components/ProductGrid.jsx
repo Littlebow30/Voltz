@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import ProductItem from "./ProductItem";
+import { useCart } from './cart-context'; 
+import { useProduct } from './product-context';
 
 export default function ProductGrid() {
-    const [products, setProducts] = useState([]);
+    const { addToCart } = useCart(); // Use the `useCart` hook here
 
-    useEffect(() => {
-        fetch('http://localhost:8080/api/clothes')
-            .then(response => response.json())
-            .then(data => setProducts(data))
-            .catch(error => console.error('Error fetching data: ', error));
-    }, []);
+    const {productlist} = useProduct()
+
 
     return (
         <section className="product-grid">
-            {products.map(product => (
+            {productlist.map(product => (
                 <ProductItem 
-                    key={product.clothing + product.color + product.size} // Unique key for each product
-                    title={`${product.clothing} - ${product.color} - ${product.size}`} 
-                    price={`$${product.price}`} 
+                    key={product.id}
+                    product={product}
+                    title={`${product.clothing} - ${product.color} - ${product.size}`}
+                    price={`$${product.price}`}
+                    addToCart={addToCart}
                 />
             ))}
         </section>
