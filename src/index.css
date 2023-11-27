@@ -1,12 +1,19 @@
-
-body, h1, p, button, select, img {
+body,
+h1,
+p,
+button,
+select,
+img {
   margin: 0;
   padding: 0;
   border: none;
   font-family: Arial, sans-serif;
 }
 
-header, nav, section, footer {
+header,
+nav,
+section,
+footer {
   padding: 20px;
   margin: 10px 0;
 }
@@ -72,13 +79,48 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .product-item {
-      width: calc(50% - 20px);
+    width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
   .product-item {
-      width: 100%;
+    width: 100%;
   }
 }
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  max-width: 400px;
+}
+
+/* Style for form labels */
+label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Style for form submit button */
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
 
