@@ -1,16 +1,25 @@
 import React from "react";
-import { Route, Routes, useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/auth-content";
 
 export default function Header() {
-   const navigate = useNavigate(); 
-    
-   const navigateToForm = () => {
-        navigate('/SignUpForm');
-   };
+  const navigate = useNavigate();
+  const { isAuthenticated, logout } = useAuth();
 
-    return  <header>
-            Voltz
-            <button onClick={navigateToForm}className="sign-in-btn">Sign In</button>
-            </header>;
-            
-};
+  const navigateToForm = () => {
+    if (isAuthenticated) {
+      logout();
+    } else {
+      navigate("/login");
+    }
+  };
+
+  return (
+    <header>
+      Voltz
+      <button onClick={navigateToForm} className="sign-in-btn">
+        {isAuthenticated ? "Sign Out" : "Sign In"}
+      </button>
+    </header>
+  );
+}

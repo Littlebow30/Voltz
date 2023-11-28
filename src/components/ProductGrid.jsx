@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
 import ProductItem from "./ProductItem";
-import { useCart } from './cart-context'; 
-import { useProduct } from './product-context';
+import { useCart } from '../context/cart-context'; 
+import { useProduct } from '../context/product-context'
 
 export default function ProductGrid() {
-    const { addToCart } = useCart(); // Use the `useCart` hook here
+    const { addToCart } = useCart(); 
 
     const {productlist} = useProduct()
 

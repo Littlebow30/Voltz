@@ -1,4 +1,5 @@
-import {Link }from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useAuth } from "../context/auth-content";
 
 export default function Navigation() {
     return  <nav>
@@ -8,5 +9,4 @@ export default function Navigation() {
             <Link to="/contact">Contact</Link>
             <Link to="/cart">Cart</Link>
             </nav>
-
-};
+}
