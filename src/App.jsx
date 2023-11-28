@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Authenticate from "./components/Authenticate";
 import SignUpForm from "./components/SignUpForm";
-import Header from "./components/header";
+import Header from "./components/Header";
 import AboutPage from './components/AboutPage';
 import CartPage from './components/CartPage';
 import ContactPage from './components/ContactPage'
